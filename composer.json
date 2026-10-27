@@ -1,0 +1,38 @@
+{
+  "name": "perspective/module-observability-compat",
+  "description": "Magento framework instrumentation compatible with PHP 7.4 and 8.x",
+  "type": "magento2-module",
+  "require": {
+    "ext-curl": "*",
+    "magento/framework": "^103.0",
+    "magento/framework-amqp": "^100.4",
+    "magento/framework-message-queue": "^100.4",
+    "magento/module-cron": "^100.4",
+    "nyholm/psr7": "^1.8",
+    "open-telemetry/exporter-zipkin": "^1.0",
+    "open-telemetry/sdk": "^1.0",
+    "perspective/module-observability": "^1.0",
+    "php": ">=7.4 <8.6",
+    "php-http/curl-client": "^2.3"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Perspective\\ObservabilityCompat\\": ""
+    }
+  },
+  "license": "proprietary",
+  "homepage": "https://github.com/perspectiveteamcom/magento2-observability-compat",
+  "support": {
+    "issues": "https://github.com/perspectiveteamcom/magento2-observability-compat/issues",
+    "source": "https://github.com/perspectiveteamcom/magento2-observability-compat"
+  },
+  "conflict": {
+    "perspective/module-observability-otel": ">=2.0"
+  },
+  "suggest": {
+    "ext-excimer": "CPU profiles when enabled in the project environment"
+  }
+}
